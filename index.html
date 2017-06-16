@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title> Unicode Nepali Converter - Hem Shrestha </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <meta name="keywords" content="Unicode Nepali Converter, Typing, Hem Shrestha" />
+    <meta name="description" content="Different type of unicode converters for your need" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h2>Unicode Nepali Converter</h2>
+      </div>
+      <div class="row">
+        
+        <div class="span12">
+          <form>
+            <div class="input textarea">
+              <textarea name="data[description]" class="UnicodeNepali" rows="5" style="width:98%" placeholder="Type Romanized Nepali words in the box  and the words will be converted into unicode Nepali as you press the spacebar.Example: typing &quot;hami nepali bhaashi&quot; becomes &quot;हामी नेपाली भाषी&quot;." id="description"></textarea>
+            </div>
+          </form>
+          
+        </div>
+      </div>
+      <div class="page-header">
+        <h2>Unicode &gt;&gt; Convert << Preeti</h2>
+      </div>
+      <div class="row">
+        <div class="span6">
+          <h3>Unicode text box</h3>
+          <textarea name="ConvertedText" id="unicode_text" rows="5" placeholder="युनिकोड शब्दहरुलाई यहाँ paste गर्नुहोस् " class="converterbox span6">यहाँ type गर्नुहोस ।</textarea>
+          
+          <input type="button" class="btnConvert btn btn-success" id="converter" name="converter" value=" Convert to Preeti >> " onClick="convert_to_Preeti();" accesskey="p"  title="alt+p"/>
+        </div>
+        <div class="span6">
+          <h3>Preeti font text box </h3>
+          <textarea name="TextToConvert" id="legacy_text" rows="5" placeholder="Preeti font का शब्दहरुलाई यहाँ paste गर्नुहोस् "  class="converterbox span6">oxfF type ug{'xf]; .</textarea>
+          <input type="button" name="converter" id="converter" value=" << Convert to Unicode " onClick="convert_to_unicode();" accesskey="u" title="alt+u" class="btnConvert btn btn-warning" />
+        </div>
+      </div>
+      
+      <div class="page-header">
+        <h2>Mass convert - Bonus</h2>
+      </div>
+      <div class="row">
+        <form name="Form1">
+          <div class="span6">
+            <h3>Romanized text</h3>
+            <textarea onkeyup="javascript:convert();" name="ascii" rows="5" placeholder="लामो वाक्यहरुलाई यहाँ paste गर्नुहोस् " class="span6">yaha {type} garnuhos.</textarea> 
+          </div>
+          <div class="span6">
+            <h3>Unicode text</h3>
+            <textarea name="unicode" rows="5" readonly="readonly" class="span6" style="cursor:text;">यहा type गर्नुहोस ।</textarea> 
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="js/preeti_unicode.js"></script>
+    <script type="text/javascript" src="js/unicode_two_cols.js"></script>
+    <script type="text/javascript" src="js/unicode.js"></script>
+    <script type="text/javascript" src="js/d.js"></script>
+    <script>
+      InitializeUnicodeNepali();
+    </script>
+          
+    <footer class="footer">
+      <hr/>
+      <div class="container" style="text-align:center;">
+        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Funicode.hemshrestha.com.np&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=211850138851102" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+        
+        <!-- Place this tag where you want the +1 button to render. -->
+        <div class="g-plusone" data-size="medium" data-href="http://unicode.hemshrestha.com.np"></div>
+        <!-- Place this tag after the last +1 button tag. -->
+        <script type="text/javascript">
+          (function() {
+            var po = document.createElement('script');
+            po.type = 'text/javascript';
+            po.async = true;
+            po.src = 'http://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+        
+        <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://unicode.hemshrestha.com.np" data-related="Unicode Nepali" data-via="Hereshem" data-text="नेपालीमा टाईप गरौ । ">Tweet</a>
+        <script>
+          ! function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (!d.getElementById(id)) {
+              js = d.createElement(s);
+              js.id = id;
+              js.src = "//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }
+          }(document, "script", "twitter-wjs");
+        </script>
+        <a href="https://twitter.com/hereshem" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @hereshem</a>
+        <br/><br/>
+        <div style="color: grey;">Hosted on <a href="http://pi.hemshrestha.com.np" target="_blank">Meroserver</a> by <a href="http://www.hemshrestha.com.np" target="_blank">Hem Shrestha</a></div>
+        <br/>
+        <!-- Start of StatCounter Code for Default Guide -->
+        <script type="text/javascript">
+          var sc_project=9843936; 
+          var sc_invisible=0; 
+          var sc_security="cc33dab7"; 
+          var scJsHost = (("https:" == document.location.protocol) ?
+                          "https://secure." : "http://www.");
+          document.write("<sc"+"ript type='text/javascript' src='" +
+                         scJsHost+
+                         "statcounter.com/counter/counter.js'></"+"script>");
+        </script>
+        <noscript><div class="statcounter"><a title="web stats"
+          href="http://statcounter.com/" target="_blank"><img
+          class="statcounter"
+          src="http://c.statcounter.com/9843936/0/cc33dab7/0/"
+          alt="web stats"></a></div></noscript>
+        <!-- End of StatCounter Code for Default Guide -->
+      </div>
+    </footer>
+    
+  </body>
+  
+</html>
