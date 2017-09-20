@@ -34,13 +34,13 @@
       <div class="row">
         <div class="span6">
           <h3>Unicode text box</h3>
-          <textarea name="ConvertedText" id="unicode_text" rows="5" placeholder="युनिकोड शब्दहरुलाई यहाँ paste गर्नुहोस् " class="converterbox span6">यहाँ type गर्नुहोस ।</textarea>
+          <textarea name="ConvertedText" id="unicode_text" rows="5" placeholder="युनिकोड शब्दहरुलाई यहाँ paste गर्नुहोस् " class="converterbox span6">यहाँ टाईप गर्नुहोस ।</textarea>
           
           <input type="button" class="btnConvert btn btn-success" id="converter" name="converter" value=" Convert to Preeti >> " onClick="convert_to_Preeti();" accesskey="p"  title="alt+p"/>
         </div>
         <div class="span6">
           <h3>Preeti font text box </h3>
-          <textarea name="TextToConvert" id="legacy_text" rows="5" placeholder="Preeti font का शब्दहरुलाई यहाँ paste गर्नुहोस् "  class="converterbox span6">oxfF type ug{'xf]; .</textarea>
+          <textarea name="TextToConvert" id="legacy_text" rows="5" placeholder="Preeti font का शब्दहरुलाई यहाँ paste गर्नुहोस् "  class="converterbox span6">oxfF 6fO{k ug{'xf]; .</textarea>
           <input type="button" name="converter" id="converter" value=" << Convert to Unicode " onClick="convert_to_unicode();" accesskey="u" title="alt+u" class="btnConvert btn btn-warning" />
         </div>
       </div>
@@ -56,7 +56,7 @@
           </div>
           <div class="span6">
             <h3>Unicode text</h3>
-            <textarea name="unicode" rows="5" readonly="readonly" class="span6" style="cursor:text;">यहा type गर्नुहोस ।</textarea> 
+            <textarea name="unicode" rows="5" readonly="readonly" class="span6" style="cursor:text;">यहाँ type गर्नुहोस ।</textarea> 
           </div>
         </form>
       </div>
@@ -69,7 +69,13 @@
     <script>
       InitializeUnicodeNepali();
     </script>
-          
+    <style>
+      @font-face {
+          font-family: Preeti;
+          src: url(css/Preeti.ttf);
+      }
+      #legacy_text{font-family: Preeti;font-size:20px;}
+  </style>
     <footer class="footer">
       <hr/>
       <div class="container" style="text-align:center;">
